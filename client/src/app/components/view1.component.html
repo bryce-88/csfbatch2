@@ -1,0 +1,35 @@
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <table>
+        <tr>
+            <td>
+                <label>Name: </label>
+                <input type="text" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Title: </label>
+                <input type="text" formControlName="title">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comments: </label>
+                <input type="text" formControlName="comments">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Archive: </label>
+                <input type="file" formControlName="archive">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" [routerLink]="['']">Back</button>
+                <button type="submit" [disabled]="form.invalid">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>

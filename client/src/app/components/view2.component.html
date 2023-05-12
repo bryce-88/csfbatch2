@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <td>
+            {{ results.title }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            by {{ results.name }} on {{ results.date }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ results.comments }}
+        </td>
+    </tr>
+    <tr *ngFor="let url of results.urls">
+        <td>
+            <img src="{{ url }}">
+        </td>
+    </tr>
+    <tr>
+        <button type="button" [routerLink]="['/']">Back</button>
+    </tr>
+</table>
